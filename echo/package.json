@@ -1,11 +1,11 @@
 {
-  "name": "fibonacci-async-task",
-  "version": "0.1.0",
+  "name": "neon-example-echo",
+  "version": "0.0.1",
   "main": "lib/index.js",
-  "dependencies": {
-    "neon-cli": "^0.3.3"
-  },
+  "author": "Jascha Ehrenreich <jascha@jaeh.at>",
+  "license": "MIT",
   "scripts": {
-    "install": "neon build --release"
+    "start": "node lib/index.js",
+    "build": "../node_modules/.bin/neon build --release"
   }
 }
