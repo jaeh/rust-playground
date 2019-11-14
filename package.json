@@ -1,0 +1,11 @@
+{
+  "name": "fibonacci-async-task",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "dependencies": {
+    "neon-cli": "^0.3.3"
+  },
+  "scripts": {
+    "install": "neon build --release"
+  }
+}
