@@ -13,7 +13,7 @@
     "format:rust": "rustfmt native/src/** native/build.rs"
   },
   "dependencies": {
-    "@magic/log": "0.1.0",
+    "@magic/log": "0.1.0"
   },
   "devDependencies": {
     "@magic/cli": "0.0.5",
