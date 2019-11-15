@@ -1,6 +1,6 @@
 [package]
 name = "echo-cdylib"
-version = "0.1.0"
+version = "0.0.1"
 build = "build.rs"
 edition = "2018"
 
