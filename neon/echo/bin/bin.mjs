@@ -8,8 +8,8 @@ const args = {
   env: [[['--production', '--prod', '--p', '-p'], 'NODE_ENV', 'production']],
   commands: [['echo', 'e']],
   help: {
-    name: 'magic',
-    header: 'static and serverless page generator',
+    name: 'neon echo',
+    header: 'node to rust to node string echoing',
     options: {
       echo: 'string to echo through rust.',
     },
