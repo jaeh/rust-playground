@@ -1,11 +1,22 @@
 {
-  "name": "fibonacci-async-task",
-  "version": "0.1.0",
+  "name": "neon-example-echo",
+  "version": "0.0.1",
   "main": "lib/index.js",
-  "dependencies": {
-    "neon-cli": "^0.3.3"
-  },
+  "author": "Jascha Ehrenreich <jascha@jaeh.at>",
+  "license": "MIT",
   "scripts": {
-    "install": "neon build --release"
+    "start": "node bin/bin.js -- echo -e",
+    "build": "../node_modules/.bin/neon build --release",
+    "test": "t",
+    "format": "npm run format:js && npm run format:rust",
+    "format:js": "f -w",
+    "format:rust": "rustfmt native/src/** native/build.rs"
+  },
+  "dependencies": {
+    "@magic/log": "0.1.0",
+  },
+  "devDependencies": {
+    "@magic/cli": "0.0.5",
+    "@magic/test": "0.1.14"
   }
 }
