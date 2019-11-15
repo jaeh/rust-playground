@@ -1,0 +1,19 @@
+{
+  "name": "rust-neon-playground",
+  "version": "0.0.1",
+  "description": "just a personal rust neon node playground.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaeh/rust-neon-playground.git"
+  },
+  "keywords": [],
+  "author": "Jascha Ehrenreich <jascha@jaeh.at>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaeh/rust-neon-playground/issues"
+  },
+  "homepage": "https://github.com/jaeh/rust-neon-playground#readme",
+  "devDependencies": {
+    "neon-cli": "0.3.3"
+  }
+}
