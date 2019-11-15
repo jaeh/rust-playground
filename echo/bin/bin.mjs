@@ -19,9 +19,9 @@ const args = {
     example: `
 bin/bin.js echo -e testing a list of words
 
-npm start -- echo -e testing a list of words
+npm start -- testing a list of words
 
-npm start -- echo -e "list of words with '&*special chars'"
+npm start -- "list of words with '&*special chars'"
 `,
   },
 }
@@ -33,9 +33,12 @@ if (!nodeToRust) {
   nodeToRust = 'use: npm start -- some words'
 }
 
-const rustToNode = echo(nodeToRust)
+log.info('sending string to rust:', nodeToRust)
 
-console.log({
-  nodeToRust,
-  rustToNode,
-})
+try {
+  const rustToNode = echo(nodeToRust)
+  log.success('success', 'received string from rust:', rustToNode)
+} catch(e) {
+  log.error('error when echoing', e)
+}
+
