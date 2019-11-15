@@ -1,0 +1,15 @@
+[package]
+name = "echo-cdylib"
+version = "0.1.0"
+build = "build.rs"
+edition = "2018"
+
+[lib]
+name = "echo_cdylib"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.3.3"
+
+[dependencies]
+neon = "0.3.3"
