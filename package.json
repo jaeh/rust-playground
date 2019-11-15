@@ -1,0 +1,24 @@
+{
+  "name": "rust-neon-playground",
+  "version": "0.0.1",
+  "description": "just a personal rust neon node playground.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaeh/rust-neon-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaeh/rust-neon-playground/issues"
+  },
+  "homepage": "https://github.com/jaeh/rust-neon-playground#readme",
+  "devDependencies": {
+    "@magic/test": "0.1.14",
+    "neon-cli": "0.3.3"
+  }
+}
