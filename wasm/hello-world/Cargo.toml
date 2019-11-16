@@ -1,5 +1,5 @@
 [package]
-name = "wasm-hello-world"
+name = "hello-world"
 version = "0.0.1"
 authors = ["The wasm-bindgen Developers"]
 edition = "2018"

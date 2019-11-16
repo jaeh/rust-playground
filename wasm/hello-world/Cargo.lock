@@ -11,6 +11,13 @@ version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "hello-world"
+version = "0.0.1"
+dependencies = [
+ "wasm-bindgen 0.2.54 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "lazy_static"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -102,13 +109,6 @@ dependencies = [
 name = "wasm-bindgen-shared"
 version = "0.2.54"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-
-[[package]]
-name = "wasm-hello-world"
-version = "0.0.1"
-dependencies = [
- "wasm-bindgen 0.2.54 (registry+https://github.com/rust-lang/crates.io-index)",
-]
 
 [metadata]
 "checksum bumpalo 2.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ad807f2fc2bf185eeb98ff3a901bd46dc5ad58163d0fa4577ba0d25674d71708"
