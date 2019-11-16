@@ -1,0 +1,16 @@
+[package]
+name = "keccak-cdylib"
+version = "0.0.1"
+build = "build.rs"
+edition = "2018"
+
+[lib]
+name = "keccak_cdylib"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.3.3"
+
+[dependencies]
+neon = "0.3.3"
+tiny-keccak = { version = "2.0.1", features = ["sha3"] }
