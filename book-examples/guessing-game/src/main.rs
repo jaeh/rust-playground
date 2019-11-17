@@ -1,12 +1,11 @@
 use std::io;
 use std::cmp::Ordering;
-// use rand::Rng;
+use rand::Rng;
 
 fn main() {
     println!("Guess the number!");
 
-    // let secret_number : u32 = rand::thread_rng().gen_range(0, 100);;
-    let secret_number : u32 = 32;
+    let secret_number : u32 = rand::thread_rng().gen_range(0, 100);
 
     loop {
         println!("Please input a number between 0 and 100.");
