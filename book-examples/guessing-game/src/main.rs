@@ -21,7 +21,8 @@ fn main() {
         };
 
         if guess > 100 {
-            panic!("guess is too big, maximum is 100.");
+            println!("guess is too big, maximum is 100.");
+            continue;
         }
 
         println!("You guessed: {}", guess);
