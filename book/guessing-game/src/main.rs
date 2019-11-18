@@ -5,7 +5,7 @@ use rand::Rng;
 fn main() {
     println!("Guess the number!");
 
-    let secret_number : u32 = rand::thread_rng().gen_range(0, 100);
+    let secret_number : u8 = rand::thread_rng().gen_range(0, 100);
 
     loop {
         println!("Please input a number between 0 and 100.");
@@ -15,7 +15,7 @@ fn main() {
         io::stdin().read_line(&mut guess)
             .expect("Failed to read line");
 
-        let guess: u32 = match guess.trim().parse() {
+        let guess: u8 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
