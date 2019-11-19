@@ -1,7 +1,4 @@
 {
-  "author": "You <you@example.com>",
-  "name": "rust-webpack-template",
-  "version": "0.1.0",
   "scripts": {
     "build": "../node_modules/.bin/rimraf dist pkg && ../node_modules/.bin/webpack",
     "start": "npm run serve",
