@@ -16,6 +16,19 @@ fn function2() -> io::Result<()> {
     Ok(())
 }
 
+use std::fmt::Result;
+use std::io::Result as IoResult;
+
+fn function3() -> Result {
+    // --snip--
+    Ok(())
+}
+
+fn function4() -> IoResult<()> {
+    // --snip--
+    Ok(())
+}
+
 fn main() {
     let mut map = HashMap::new();
     map.insert(1, 2);
