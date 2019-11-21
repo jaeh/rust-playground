@@ -1,14 +1,18 @@
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-extern "C" {
-    fn alert(s: &str);
+pub fn greet(name: &str) -> String {
+  format!("Hello, {}!", name)
 }
 
-#[wasm_bindgen]
-pub fn greet(name: &str) -> String {
-    let s = format!("Hello, {}!", name);
-    alert(&s);
+#[test]
+fn test_ohai() {
+    let result = greet("ohai");
+    assert_eq!("Hello, ohai!", result);
+}
 
-    s
+#[test]
+fn test_world() {
+    let result = greet("World");
+    assert_eq!("Hello, World!", result);
 }
