@@ -1,8 +1,11 @@
 {
   "scripts": {
-    "build": "../node_modules/.bin/rimraf dist pkg && ../node_modules/.bin/webpack",
     "start": "npm run serve",
-    "serve": "../node_modules/.bin/rimraf dist pkg && ../node_modules/.bin/webpack-dev-server --open -d",
+    "clean": "../node_modules/.bin/rimraf dist pkg",
+    "dev": "npm run clean && npm run build",
+    "build": "../node_modules/.bin/webpack",
+    "build:release": "../node_modules/.bin/rimraf dist pkg && NODE_ENV=production npm run build",
+    "serve": "npm run clean && ../node_modules/.bin/webpack-dev-server --open -d",
     "test": "cargo test && wasm-pack test --headless"
   }
 }
