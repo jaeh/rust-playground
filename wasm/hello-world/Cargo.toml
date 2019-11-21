@@ -8,10 +8,10 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2.54"
+wasm-bindgen = "0.2.55"
 
 # These crates are used for running unit tests.
 [dev-dependencies]
-wasm-bindgen-test = "0.3.4"
-js-sys = "0.3.31"
-wasm-bindgen-futures = "0.4.4"
+wasm-bindgen-test = "0.3.5"
+js-sys = "0.3.32"
+wasm-bindgen-futures = "0.4.5"
