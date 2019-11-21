@@ -1,0 +1,23 @@
+[package]
+name = "sha3-512-wasm"
+version = "0.0.1"
+authors = ["The wasm-bindgen Developers"]
+edition = "2018"
+
+[profile.release]
+lto = true
+opt-level = 'z'
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.55"
+tiny-keccak = { version = "2.0.1", features = ["sha3"] }
+sha3 = "0.8.2"
+
+# These crates are used for running unit tests.
+[dev-dependencies]
+wasm-bindgen-test = "0.3.5"
+js-sys = "0.3.32"
+wasm-bindgen-futures = "0.4.5"
