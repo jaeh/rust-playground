@@ -1,38 +1,49 @@
 use std::{
-    env, error::Error, fs::{self, File}, io::Write, path::Path,
+    env,
+    error::Error,
+    fs::{self, File},
+    io::Write,
+    path::Path,
 };
 
 const SOURCE_DIR: &str = "www";
 
-fn main() -> Result<(), Box<dyn Error>> {
-    let out_dir = env::var("OUT_DIR")?;
-    let dest_path = Path::new(&out_dir).join("all_the_files.rs");
-    let mut all_the_files = File::create(&dest_path)?;
+// fn run() -> Result<(), Box<dyn Error>> {
+//     let out_dir = env::var("OUT_DIR")?;
 
-    let path = env::current_dir()?;
-		let cwd = path.display();
+//     let dest_path = Path::new(&out_dir).join("all_the_files.rs");
+//     let mut all_the_files = File::create(&dest_path)?;
 
-		let source_dir = format!("{}/{}", cwd, SOURCE_DIR);
-    writeln!(&mut all_the_files, r#"["#,)?;
+//     let path = env::current_dir()?;
+//     let cwd = path.display();
 
-    for f in fs::read_dir(SOURCE_DIR)? {
-        let f = f?;
+//     let source_dir = format!("{}/{}", cwd, SOURCE_DIR);
 
-        if !f.file_type()?.is_file() {
-            continue;
-        }
+//     writeln!(&mut all_the_files, r#"\t["#);
 
-				let path = format!("{}/{}", cwd, f.path().display());
+//     for f in fs::read_dir(SOURCE_DIR)? {
+//         let f = f?;
 
-        writeln!(
-            &mut all_the_files,
-            r#"("{name}", include_bytes!("{path}")),"#,
-            name = f.path().display(),
-						path = path,
-        )?;
-    }
+//         if !f.file_type()?.is_file() {
+//             continue;
+//         }
 
-    writeln!(&mut all_the_files, r#"];"#,)?;
+//         let path = format!("../../../../../{}", f.path().display());
+//         let name = format!("{}", f.path().display());
 
-    Ok(())
+//         writeln!(
+//             &mut all_the_files,
+//             r#"("{name}", include_bytes!("{path}")),"#,
+//             name = name,
+//             path = path,
+//         )?;
+//     }
+
+//     writeln!(&mut all_the_files, r#"\t]\n};"#,)?;
+
+//     Ok(())
+// }
+
+fn main() {
+    // run();
 }
