@@ -6,7 +6,8 @@ import init, { greet } from '/pkg/call_function.js'
  * @param {String} response returned from rust 
  */
 const respond = response => {
-  console.log(response)
+	console.log('rust called respond in src/index.mjs. arguments:', response)
+	document.body.innerHTML += `<p>rust says: <i>${response}</i></p>`
 }
 
 globalThis.respond = respond
