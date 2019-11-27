@@ -13,7 +13,6 @@ crate-type = ["cdylib"]
 
 [dependencies]
 wasm-bindgen = "0.2.55"
-tiny-keccak = { version = "2.0.1", features = ["sha3"] }
 sha3 = "0.8.2"
 
 # These crates are used for running unit tests.
