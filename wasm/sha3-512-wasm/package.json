@@ -1,11 +1,14 @@
 {
+  "name": "sha3-512-wasm",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "http-server",
+    "start": "npm run serve",
+    "serve": "python3 -m http.server",
+    "serve:release": "npm run build && npm run optimize && npm run serve",
     "clean": "../node_modules/.bin/rimraf dist pkg",
-    "dev": "npm run clean && npm run build",
-    "build": "wasm-pack build",
-    "build:release": "wasm-pack build --release && npm run optimize",
-    "serve": "npm run clean && ../node_modules/.bin/webpack-dev-server --open -d",
+    "build": "wasm-pack build --target web",
+    "build:release": "../node_modules/.bin/rimraf dist pkg && npm run build && npm run optimize",
     "test": "cargo test && wasm-pack test --headless --firefox",
     "optimize": "wasm-opt -O3 -o pkg/sha3_512_wasm_bg.wasm pkg/sha3_512_wasm_bg.wasm"
   }
