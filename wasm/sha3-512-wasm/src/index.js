@@ -32,7 +32,12 @@ const run = async () => {
     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`
 
   const loremIpsumHash = await hash(loremIpsum)
-  console.log('hash("lorem ipsum....") returned: ', loremIpsumHash )
+  console.log('hash("lorem ipsum....") returned: ', loremIpsumHash)
+
+  const loremIpsumHash2 = await hash(loremIpsum)
+  console.log('hash("lorem ipsum....") (again) returned: ', loremIpsumHash2)
+
+  console.log(loremIpsumHash === loremIpsumHash2, `hashes for "lorem ipsum..." are equal`)
 }
 
 run()
