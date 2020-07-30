@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "js-sha3": "0.8.0",
-    "keccak": "2.0.0",
-    "rimraf": "3.0.0"
+    "keccak": "3.0.1",
+    "rimraf": "3.0.2"
   }
 }

@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/jaeh/rust-neon-playground#readme",
   "devDependencies": {
-    "@magic/test": "0.1.14",
-    "neon-cli": "0.3.3"
+    "@magic/test": "0.1.52",
+    "neon-cli": "0.4.0"
   }
 }
